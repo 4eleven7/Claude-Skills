@@ -1,6 +1,6 @@
-# Agent Skills
+# Beepus Maximus Skills
 
-Reusable agent skills and Claude Code plugin bundles for Apple platform engineering, product work, and project workflows. Skills are plain `SKILL.md` directories, so the same content can be used by Codex and Claude. Claude-only slash commands live under `plugins/project-tools/commands`.
+Reusable Beepus Maximus agent skills and Claude Code plugin bundles for Apple platform engineering, product work, and project workflows. Skills are plain `SKILL.md` directories, so the same content can be used by Codex and Claude. Claude-only slash commands live under `plugins/project-tools/commands`.
 
 ## What's Included
 
