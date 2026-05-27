@@ -1,0 +1,8 @@
+{
+  "name": "ios-platform",
+  "description": "13 skills for iOS architecture, debugging, testing, tooling, HIG, Swift language, and shipping",
+  "version": "1.0.0",
+  "author": {
+    "name": "Dan Love"
+  }
+}

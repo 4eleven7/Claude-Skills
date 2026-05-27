@@ -1,0 +1,8 @@
+{
+  "name": "ios-frameworks",
+  "description": "35 skills covering Apple frameworks — HealthKit, MapKit, StoreKit, CoreML, RealityKit, ActivityKit, and more",
+  "version": "1.0.0",
+  "author": {
+    "name": "Dan Love"
+  }
+}

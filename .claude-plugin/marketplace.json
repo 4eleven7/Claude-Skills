@@ -1,0 +1,162 @@
+{
+  "name": "claude-skills",
+  "owner": {
+    "name": "Dan Love",
+    "email": "dan@4eleven7.com"
+  },
+  "metadata": {
+    "description": "Curated agent skills for iOS development, SwiftUI, UIKit, and project workflows",
+    "version": "1.0.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "ios-frameworks",
+      "source": "./plugins/ios-frameworks",
+      "description": "35 skills covering Apple frameworks \u2014 HealthKit, MapKit, StoreKit, CoreML, RealityKit, ActivityKit, and more",
+      "version": "1.0.0",
+      "category": "ios",
+      "tags": [
+        "ios",
+        "apple",
+        "frameworks",
+        "swift"
+      ],
+      "keywords": [
+        "healthkit",
+        "mapkit",
+        "storekit",
+        "coreml",
+        "realitykit",
+        "activitykit",
+        "cloudkit",
+        "swiftdata",
+        "core-data",
+        "combine"
+      ]
+    },
+    {
+      "name": "ios-platform",
+      "source": "./plugins/ios-platform",
+      "description": "13 skills for iOS architecture, debugging, testing, tooling, HIG, Swift language, and shipping",
+      "version": "1.0.0",
+      "category": "ios",
+      "tags": [
+        "ios",
+        "architecture",
+        "testing",
+        "debugging",
+        "swift"
+      ],
+      "keywords": [
+        "architecture",
+        "swift-testing",
+        "xcuitest",
+        "debugging",
+        "hig",
+        "shipping",
+        "concurrency",
+        "tooling"
+      ]
+    },
+    {
+      "name": "swiftui",
+      "source": "./plugins/swiftui",
+      "description": "14 skills for SwiftUI mastery \u2014 components, design systems, Figma-to-code, hardening, microinteractions, performance audits, view refactors, shaders, and workflow audits",
+      "version": "1.0.0",
+      "category": "ios",
+      "tags": [
+        "swiftui",
+        "ios",
+        "ui",
+        "design"
+      ],
+      "keywords": [
+        "swiftui",
+        "components",
+        "figma",
+        "design-system",
+        "microinteractions",
+        "performance",
+        "view-refactor",
+        "shaders",
+        "anti-slop",
+        "review"
+      ]
+    },
+    {
+      "name": "uikit",
+      "source": "./plugins/uikit",
+      "description": "6 skills for UIKit \u2014 Auto Layout, collection views, Core Animation, navigation, and SwiftUI interop",
+      "version": "1.0.0",
+      "category": "ios",
+      "tags": [
+        "uikit",
+        "ios",
+        "ui"
+      ],
+      "keywords": [
+        "auto-layout",
+        "uicollectionview",
+        "uitableview",
+        "core-animation",
+        "navigation",
+        "interop"
+      ]
+    },
+    {
+      "name": "project-tools",
+      "source": "./plugins/project-tools",
+      "description": "50 skills and 25 thin Claude command wrappers for project workflows \u2014 planning, specs, auditing, TDD, debugging, code review, shipping, and more",
+      "version": "1.0.0",
+      "category": "productivity",
+      "tags": [
+        "project",
+        "workflow",
+        "productivity",
+        "code-review"
+      ],
+      "keywords": [
+        "audit",
+        "blast-radius",
+        "changelog",
+        "code-review",
+        "debugging",
+        "docs-audit",
+        "finalize",
+        "planning",
+        "refactor",
+        "ship",
+        "skill-audit",
+        "specs",
+        "strategy",
+        "tdd",
+        "workflow"
+      ]
+    },
+    {
+      "name": "product",
+      "source": "./plugins/product",
+      "description": "4 skills for product analytics, App Store marketing, monetization strategy, and onboarding",
+      "version": "1.0.0",
+      "category": "product",
+      "tags": [
+        "product",
+        "analytics",
+        "marketing",
+        "monetization",
+        "onboarding"
+      ],
+      "keywords": [
+        "analytics",
+        "app-store",
+        "aso",
+        "monetization",
+        "pricing",
+        "onboarding",
+        "activation",
+        "retention"
+      ]
+    }
+  ]
+}
