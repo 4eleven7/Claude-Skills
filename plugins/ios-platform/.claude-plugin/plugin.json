@@ -1,6 +1,6 @@
 {
   "name": "ios-platform",
-  "description": "13 skills for iOS architecture, debugging, testing, tooling, HIG, Swift language, and shipping",
+  "description": "11 skills for Apple platform architecture, debugging, testing, tooling, HIG, Swift language, and App Store release work",
   "version": "1.0.0",
   "author": {
     "name": "Dan Love"

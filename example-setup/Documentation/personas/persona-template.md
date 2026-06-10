@@ -1,47 +1,33 @@
-<!-- Example persona template — replace bracketed placeholders with your own app's domain and details -->
----
-name: <Name>
-archetype: <The [Adjective] [Noun]>
----
+# Persona Template
 
-## Demographics
+## Snapshot
 
-- Age, occupation, context
-- Devices (phone model, computer, tablet)
-- Location, social media presence
-- Disposable income / price sensitivity
+| Item | Value |
+|---|---|
+| Name | `[PersonaName]` |
+| Role | `[Role or context]` |
+| Experience level | `[Beginner/intermediate/expert]` |
+| Primary goal | `[Goal]` |
 
-## Current Situation
+## Situation
 
-- Work style and daily routine
-- Current productivity tools and habits
-- Workflow complexity and team context
-- Pain points with existing tools
-- What brought them to [YourApp]
+`[What is happening in their life or work that makes this product relevant?]`
 
-## Psychographics
+## Needs
 
-- **Values:** What matters to them in a productivity app
-- **Fears:** What would make them quit or distrust the app
-- **Trust signals:** What builds confidence in the product
-- **Decision style:** How they evaluate, adopt, and pay for tools
+- `[Need]`
+- `[Need]`
 
-## Behavioural Traits
+## Friction
 
-- How often they open the app and when
-- Logging style (meticulous vs. passive vs. minimal)
-- Time horizon they care about (daily vs. weekly vs. monthly trends)
-- Social/sharing behaviour
-- Power user vs. casual
+- `[Concern or blocker]`
+- `[Concern or blocker]`
 
-## Key Questions They Ask
+## Evaluation Questions
 
-- 3-5 questions this persona would naturally ask of a productivity app
+- `[Question this persona would ask]`
+- `[Question this persona would ask]`
 
-## Red Flags (Triggers Distrust or Exit)
+## Success Signal
 
-- 5-6 specific things that would make this persona churn
-
-## Conversion Triggers
-
-- 4-5 specific moments or features that would make this persona stay and pay
+`[What would make this persona trust or keep using the product?]`

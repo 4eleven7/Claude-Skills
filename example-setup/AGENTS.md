@@ -1,71 +1,59 @@
-# [Your App] Agent Guide
+# Project Agent Guide
 
-<!--
-  This is an example AGENTS.md for an iOS project.
-  Replace [Your App] with your app name and adapt sections to your project.
-  AGENTS.md is loaded for subagents (e.g. those spawned by the Agent tool).
-  Keep it leaner than CLAUDE.md — subagents have smaller context windows.
--->
+This is a generic template. Replace bracketed placeholders before using it in a real project.
 
-This file is an entrypoint for coding agents working in this repo.
+## First Reads
 
-It intentionally does not duplicate project policy. Canonical rules live under `Documentation/system/` and `Documentation/templates/`.
+1. Read this file.
+2. Read `Documentation/system/documentation-index.md`.
+3. Read the relevant system document before changing architecture, persistence, testing, UI, release, or build behaviour.
+4. Read the approved feature spec before changing user-visible behaviour.
 
-## Start Here
+If a referenced file is missing, search `Documentation/`, `docs/`, `.github/`, and the repo root. If no canonical rule exists, ask before inventing one.
 
-Before coding:
+## Project Facts
 
-1. Read `Documentation/system/documentation-index.md`
-2. Read `Documentation/lessons.md`
-3. Read the approved feature spec in `Documentation/specifications/` if the task changes feature behaviour
+| Item | Value |
+|---|---|
+| Product name | `[ProjectName]` |
+| Primary platforms | `[iOS/macOS/web/server/etc.]` |
+| Main app or package target | `[TargetName]` |
+| Test targets | `[TestTargetNames]` |
+| Minimum supported version | `[PlatformVersion]` |
+| Package manager/build system | `[Xcode/SwiftPM/npm/etc.]` |
 
-If a spec, template, or canonical system doc conflicts with an old example, the canonical doc wins.
+## Working Rules
 
-## Agent Operating Rules
+- Prefer direct, technical feedback over soft wording.
+- Keep changes scoped to the user request.
+- Do not invent APIs, targets, scripts, folders, or conventions.
+- Do not discard uncommitted changes unless explicitly asked.
+- If a request conflicts with an approved spec or canonical doc, call out the conflict before implementing.
+- Reread files after editing them.
+- Verify with targeted tests first, then broader checks when risk warrants it.
 
-- State assumptions explicitly when they matter
-- If something is unclear, ask a targeted question instead of guessing
-- Default to building, not prolonged planning
-- When given a bug or failing test, fix it end-to-end
-- Write or refine tests first for logic bugs and behavioural changes where the behaviour should be proven
-- Keep changes surgical; do not refactor unrelated code
-- Prefer concrete implementations over speculative abstractions
-- If a request conflicts with an approved spec, call it out before implementing
-- After any user correction, update `Documentation/lessons.md`
-- Verify work with the appropriate build, test, lint, or review steps before calling it done
+## Validation
 
-## Runtime Notes
+Read `Documentation/system/build-and-validation.md` before running broad commands.
 
-<!--
-  Adapt these to your project's targets and tooling.
-  Subagents need to know the minimum context to build and test correctly.
--->
+If validation commands are not documented:
 
-- Use `Documentation/system/build-and-validation-commands.md` for canonical commands
-- Prefer canonical docs over stale examples in old comments or partial snippets
+1. Inspect project files for real targets and scripts.
+2. Prefer the smallest command that proves the changed behaviour.
+3. Tell the user when validation cannot be run locally.
 
-## Common Paths
+## Documentation Routing
 
-<!--
-  List the most important docs so subagents can find them quickly.
-  Keep this short — subagents should not need to read everything.
--->
+| Task | Read |
+|---|---|
+| Project map and doc ownership | `Documentation/system/documentation-index.md` |
+| Product and platform context | `Documentation/system/project-context.md` |
+| Architecture or dependency changes | `Documentation/system/architecture.md` |
+| Build, test, lint, or format commands | `Documentation/system/build-and-validation.md` |
+| Code style or API conventions | `Documentation/system/coding-standards.md` |
+| Test strategy or fixtures | `Documentation/system/testing-strategy.md` |
+| Release, migration, or compatibility risk | `Documentation/system/release-policy.md` |
 
-- Documentation map: `Documentation/system/documentation-index.md`
-- Workflow: `Documentation/system/development-workflow.md`
-- Architecture: `Documentation/system/system-architecture.md`
-- SwiftUI: `Documentation/system/swiftui-view-guidelines.md`
-- Testing: `Documentation/system/testing-strategy.md`
-- Git and review: `Documentation/system/git-and-review-workflow.md`
+## Keep This File Small
 
-## Persistence Rules
-
-- Persisted schema changes are product changes.
-- Do not treat app-data resets as the default answer to schema evolution.
-- If a persisted model is durable, on `main`, spec-referenced, UI-visible, or reused across features, plan migrations.
-- `DEBUG`-only local store reset tooling is allowed only as an explicit developer convenience.
-- No silent destructive fallback outside `DEBUG`.
-
-## Rule
-
-If you are about to add project policy to this file, put it in a canonical document instead and link it here.
+This file is a map, not a manual. Put durable policy in `Documentation/system/` and link to it here.

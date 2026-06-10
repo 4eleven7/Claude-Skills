@@ -1,6 +1,6 @@
 {
   "name": "swiftui",
-  "description": "14 skills for SwiftUI mastery — components, design systems, Figma-to-code, hardening, microinteractions, performance audits, view refactors, shaders, and workflow audits",
+  "description": "9 skills for SwiftUI implementation, design exploration, hardening, performance, visual review, shaders, and Figma translation",
   "version": "1.0.0",
   "author": {
     "name": "Dan Love"

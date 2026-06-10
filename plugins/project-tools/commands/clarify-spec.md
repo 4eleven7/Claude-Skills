@@ -1,7 +1,0 @@
-# Clarify Spec — Interactive Spec Gap-Filling
-
-This Claude command is a thin shortcut for the `clarify-spec` skill.
-
-Use the `clarify-spec` skill for this request. Pass `$ARGUMENTS` through as the user-provided scope, target, or instruction.
-
-Do not duplicate workflow logic here. The skill is canonical so the same behavior works in Codex and Claude.

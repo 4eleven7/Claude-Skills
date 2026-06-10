@@ -4,11 +4,8 @@
     "name": "Dan Love",
     "email": "dan@4eleven7.com"
   },
-  "metadata": {
-    "description": "Curated agent skills for iOS development, SwiftUI, UIKit, and project workflows",
-    "version": "1.0.0",
-    "pluginRoot": "./plugins"
-  },
+  "description": "Curated agent skills for iOS development, SwiftUI, UIKit, and project workflows",
+  "version": "1.0.0",
   "plugins": [
     {
       "name": "ios-frameworks",
@@ -38,7 +35,7 @@
     {
       "name": "ios-platform",
       "source": "./plugins/ios-platform",
-      "description": "13 skills for iOS architecture, debugging, testing, tooling, HIG, Swift language, and shipping",
+      "description": "11 skills for Apple platform architecture, debugging, testing, tooling, HIG, Swift language, and App Store release work",
       "version": "1.0.0",
       "category": "ios",
       "tags": [
@@ -54,7 +51,7 @@
         "xcuitest",
         "debugging",
         "hig",
-        "shipping",
+        "app-store-release",
         "concurrency",
         "tooling"
       ]
@@ -62,7 +59,7 @@
     {
       "name": "swiftui",
       "source": "./plugins/swiftui",
-      "description": "14 skills for SwiftUI mastery \u2014 components, design systems, Figma-to-code, hardening, microinteractions, performance audits, view refactors, shaders, and workflow audits",
+      "description": "9 skills for SwiftUI implementation, design exploration, hardening, performance, visual review, shaders, and Figma translation",
       "version": "1.0.0",
       "category": "ios",
       "tags": [
@@ -73,21 +70,21 @@
       ],
       "keywords": [
         "swiftui",
-        "components",
+        "swiftui-patterns",
         "figma",
-        "design-system",
+        "screen-design-exploration",
         "microinteractions",
         "performance",
         "view-refactor",
         "shaders",
-        "anti-slop",
-        "review"
+        "harden",
+        "visual-review"
       ]
     },
     {
       "name": "uikit",
       "source": "./plugins/uikit",
-      "description": "6 skills for UIKit \u2014 Auto Layout, collection views, Core Animation, navigation, and SwiftUI interop",
+      "description": "6 skills for UIKit \u2014 Auto Layout, collection views, Core Animation, navigation, fundamentals, and SwiftUI interop",
       "version": "1.0.0",
       "category": "ios",
       "tags": [
@@ -107,7 +104,7 @@
     {
       "name": "project-tools",
       "source": "./plugins/project-tools",
-      "description": "50 skills and 25 thin Claude command wrappers for project workflows \u2014 planning, specs, auditing, TDD, debugging, code review, shipping, and more",
+      "description": "40 skills for project workflows \u2014 planning, specs, auditing, debugging, code review, shipping, and more",
       "version": "1.0.0",
       "category": "productivity",
       "tags": [
@@ -119,18 +116,18 @@
       "keywords": [
         "audit",
         "blast-radius",
-        "changelog",
+        "change-summary",
         "code-review",
         "debugging",
-        "docs-audit",
-        "finalize",
+        "project-state-audit",
+        "post-implementation-qa",
         "planning",
+        "pr-shipping",
         "refactor",
-        "ship",
         "skill-audit",
         "specs",
         "strategy",
-        "tdd",
+        "small-change",
         "workflow"
       ]
     },
