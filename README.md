@@ -24,9 +24,9 @@ Reusable agent skills for Apple platform engineering, product work, and project 
 
 ## Installation
 
-### As Plain Skills
+### Codex
 
-Use the skill directories directly, or copy/symlink them into the skill directory used by your agent runtime.
+Use the skill directories directly, or copy/symlink them into the Codex skills directory.
 
 ```bash
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
@@ -35,9 +35,9 @@ ln -sfn "$PWD"/plugins/*/skills/* "${CODEX_HOME:-$HOME/.codex}/skills/"
 
 Use copies instead of symlinks when you want a pinned snapshot that does not change as this repository changes.
 
-### As Plugin Bundles
+### Claude Code
 
-Install the plugin bundles from the plugin marketplace when your runtime supports this repository format:
+Install the plugin bundles from the Claude plugin marketplace:
 
 ```bash
 /plugin marketplace add 4eleven7/Claude-Skills
@@ -54,21 +54,6 @@ Update installed plugins:
 ```bash
 /plugin marketplace update claude-skills
 ```
-
-## Local Development
-
-Before publishing changes, verify:
-
-- every skill directory has a top-level `SKILL.md`;
-- every `SKILL.md` has only `name` and `description` frontmatter;
-- skill names are unique across the catalog;
-- each skill directory name matches its frontmatter `name`;
-- long-form guidance is in `references/`, not bloating `SKILL.md`;
-- reference files do not carry skill frontmatter;
-- plugin JSON is valid;
-- `git diff --check` passes.
-
-See `skill-catalog-audit.md` for the latest cleanup/validation report.
 
 ## Skill Catalog
 
