@@ -41,6 +41,7 @@ Map the session state to a position in the workflow pipeline:
 Thinking about a feature
   → `spec-workflow` (if spec exists but has gaps)
   → `project-state-audit` (if unsure what to work on next)
+  → `test-driven-implementation` (if spec is ready and behaviour is high-risk, persistence-heavy, or complex)
   → `implement` (if spec is ready)
 
 Small or trivial change
@@ -49,6 +50,7 @@ Small or trivial change
   → `implement` (needs a plan or architectural decision)
 
 Building a feature
+  → `test-driven-implementation` (if starting risky logic, persistence, complex rules, or strict TDD)
   → `implement` (if mid-build, resume)
   → `hypothesis-debug` (if a test is failing or something is broken)
   → `code-style` (if code is written, no obvious bugs)
@@ -92,7 +94,8 @@ Cross-reference the session against this checklist. Only flag items relevant to 
 |---|---|---|
 | Spec was read and gaps identified? | Working from a spec | `spec-workflow` skill |
 | Plan was approved before coding? | Any implementation | `implement` skill |
-| Tests exist and pass? | Any code change | `implement` skill or `hypothesis-debug` skill |
+| Independent behavioural tests needed? | Risky logic, persistence, complex rules, strict TDD | `test-driven-implementation` skill |
+| Tests exist and pass? | Any code change | `implement` skill, `test-driven-implementation` skill, or `hypothesis-debug` skill |
 | Code style audit done? | UI code was written | `code-style` skill |
 | UX audit done? | User-facing feature | `ux-audit` skill |
 | Quality gate passed? | User-facing feature | `pre-ship` skill |

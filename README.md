@@ -1,6 +1,6 @@
 # Agent Skills
 
-Reusable agent skills for Apple platform engineering, product work, and project workflows. The active catalog contains 105 skills, grouped into plugin bundles but usable as plain `SKILL.md` directories by any agent runtime that supports local skills.
+Reusable agent skills for Apple platform engineering, product work, and project workflows. The active catalog contains 106 skills, grouped into plugin bundles but usable as plain `SKILL.md` directories by any agent runtime that supports local skills.
 
 ## What This Repo Contains
 
@@ -18,9 +18,9 @@ Reusable agent skills for Apple platform engineering, product work, and project 
 | `plugins/ios-platform` | 11 | Cross-cutting Apple platform skills for architecture, debugging, testing, tooling, HIG, Swift language, and App Store release work. |
 | `plugins/swiftui` | 9 | SwiftUI skills for implementation, design exploration, hardening, performance, visual review, shaders, and Figma translation. |
 | `plugins/uikit` | 6 | UIKit skills for Auto Layout, collection views, Core Animation, navigation, fundamentals, and SwiftUI interop. |
-| `plugins/project-tools` | 40 | Generic project workflow skills for planning, specs, debugging, review, refactoring, release, memory, and session hygiene. |
+| `plugins/project-tools` | 41 | Generic project workflow skills for planning, specs, debugging, review, refactoring, release, memory, and session hygiene. |
 | `plugins/product` | 4 | Product skills for analytics interpretation, App Store marketing, monetization strategy, and onboarding. |
-| **Total** | **105** | |
+| **Total** | **106** | |
 
 ## Installation
 
@@ -146,7 +146,7 @@ UIKit skills for Auto Layout, collection views, Core Animation, navigation, fund
 | `uikit-interop` | Use when bridging SwiftUI and UIKit with representables, UIHostingController, UIHostingConfiguration, or incremental adoption. |
 | `uikit-navigation` | Use when building or reviewing UIKit navigation controllers, modal presentations, custom transitions, or coordinator routing. |
 
-### project-tools (40 skills)
+### project-tools (41 skills)
 
 Generic project workflow skills for planning, specs, debugging, review, refactoring, release, memory, and session hygiene.
 
@@ -188,6 +188,7 @@ Generic project workflow skills for planning, specs, debugging, review, refactor
 | `spec-workflow` | Use when drafting, clarifying, researching, or syncing a feature specification before or after implementation. |
 | `strategic-refactor` | Use when finding high-leverage refactors, identifying repo-wide complexity, choosing the best refactor, reducing architectural drag, or ranking refactor candidates. |
 | `strategy-audit` | Use when proposing, reviewing, or choosing a strategy, plan, architecture, migration, rollout, or confidence claim. |
+| `test-driven-implementation` | Use when implementing specs with significant business logic, persistence, complex rules, or high-risk behaviour where independent behavioural tests should drive the implementation. |
 | `tidy-memory` | Use when auditing, shrinking, organizing, compacting, trimming, or deduplicating agent memory or project memory that has become stale or too large. |
 | `user-test` | Evaluate a feature, idea, spec, or design through target personas and produce a product verdict. |
 | `ux-audit` | Audit user-facing workflows from entry points through outcomes to find broken promises and dead ends. |

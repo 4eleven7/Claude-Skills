@@ -6,9 +6,11 @@ description: Use when executing an implementation plan with multiple mostly inde
 # Multi-Agent Implementation
 
 ## Routing
-Use only when implementation tasks are mostly independent and can be delegated in parallel. Use `implement` for one coherent task, `strategy-audit` when delegation itself is risky, and `code-review` or `pre-ship` for final quality checks.
+Use only when implementation tasks are mostly independent and can be delegated in parallel. Use `implement` for one coherent task, `test-driven-implementation` when the main need is independent behavioural test authorship before implementation, `strategy-audit` when delegation itself is risky, and `code-review` or `pre-ship` for final quality checks.
 
 Dispatch fresh agents per task. Two-stage review (spec compliance, then code quality) catches issues early.
+
+This skill is about task concurrency and review between delegated tasks. It does not replace strict red-green implementation from independently authored tests.
 
 ## When to Use
 
