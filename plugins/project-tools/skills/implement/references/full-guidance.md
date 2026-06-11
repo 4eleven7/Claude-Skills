@@ -53,6 +53,14 @@ If the premises hold → proceed to Phase 2.
 
 If a premise is shaky → present the concern to the user before proceeding. A concrete "we could skip this because X already handles it" is more useful than building something unnecessary.
 
+### Phase 1.6: Test-Driven Routing Check
+
+Before planning, decide whether this work needs independent behavioural tests rather than ordinary same-agent test-first implementation.
+
+Redirect to `test-driven-implementation` when the approved scope includes significant business rules, persistence, schema changes, migration risk, complex edge cases, high-risk data or privacy behaviour, or when the user asks for strict TDD/red-green/independent tests.
+
+Stay in this `implement` workflow for straightforward features, UI-heavy work with limited logic, or changes where same-agent test-first coverage is sufficient. Do not silently run the heavier workflow just because tests are required; tests are already mandatory here.
+
 ### Phase 2: Audit Existing Code
 
 Before planning, understand what exists:
@@ -233,6 +241,7 @@ After implementation is complete, suggest the appropriate next action based on w
 | Idea surfaced during build but out of scope | `capture-idea` skill | Capture the idea with a trigger condition for later |
 | User-facing feature, not yet persona-validated | `user-test` skill | Validate resonance with target users before or after building |
 | Session getting long, context heavy | `session-handoff` skill | Checkpoint progress before `/compact`, then `session-handoff` skill |
+| Future work needs stricter behavioural proof | `test-driven-implementation` skill | Use independent test authorship for risky logic, persistence, or regression-sensitive behaviour |
 
 Typical flow: `spec-workflow` skill → `implement` skill → `code-style` skill → `ux-audit` skill → `pre-ship` skill → `code-review` skill → `blast-radius` skill → `spec-workflow` skill → `pr-shipping` skill
 
