@@ -1,6 +1,6 @@
 ---
 name: blast-radius
-description: Analyze a diff or branch to identify affected files, dependents, tests, and release risk before shipping.
+description: Use when analyzing a diff, branch, or planned change to identify affected files, dependents, tests, release risk, rollback scope, or hidden blast radius before shipping.
 ---
 
 # Blast Radius — Pre-Ship Diff Analysis

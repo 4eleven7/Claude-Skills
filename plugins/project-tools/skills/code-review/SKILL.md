@@ -1,6 +1,6 @@
 ---
 name: code-review
-description: Review code changes for defects, regressions, missing tests, and risky design decisions before shipping.
+description: Use when reviewing code changes for defects, regressions, missing tests, risky design decisions, security issues, performance problems, or overall quality before shipping.
 ---
 
 # Code Review — Fresh-Eyes Critique Loop
@@ -11,7 +11,9 @@ Review code changes for defects, regressions, missing tests, and risky design de
 
 ## Routing
 
-Use this skill only when the request matches the frontmatter description. If a narrower framework, platform, testing, debugging, or workflow skill clearly owns the request, use the narrower skill instead.
+Use this as the repository's code-review-and-quality workflow. It owns multi-axis code review: correctness, readability, architecture, security, performance, and test quality.
+
+Use this skill only when the request matches the frontmatter description. If a narrower framework, platform, testing, debugging, or workflow skill clearly owns the request, use the narrower skill instead. Use `code-simplification` when the main issue is complexity reduction after behavior is already correct.
 
 Before assuming project-specific setup, look for the expected docs, scripts, folders, tools, or memory files in the repository. If the required setup is missing and the workflow cannot proceed without it, ask the user for the location or permission to create it.
 

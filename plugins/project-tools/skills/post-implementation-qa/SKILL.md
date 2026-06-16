@@ -1,6 +1,6 @@
 ---
 name: post-implementation-qa
-description: Use after implementation to discover and run project-defined validation, review the diff, capture learnings, and prepare handoff to commit or PR shipping.
+description: Use when implementation is complete and the work needs project-defined validation, diff review, lesson capture, or handoff to commit and PR shipping.
 ---
 
 # Post-Implementation QA

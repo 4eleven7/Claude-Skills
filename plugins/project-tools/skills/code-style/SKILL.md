@@ -1,6 +1,6 @@
 ---
 name: code-style
-description: Audit and fix non-mechanical code style issues that formatters and linters usually miss.
+description: Use when auditing or fixing non-mechanical code style issues that formatters and linters usually miss, including clarity, naming, consistency, and house-style drift.
 ---
 
 # Code Style — Enforce House Style

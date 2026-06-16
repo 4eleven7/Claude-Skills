@@ -1,6 +1,6 @@
 ---
 name: pr-shipping
-description: Commit, push, open pull requests, monitor checks, and land changes through a disciplined pull request workflow.
+description: Use when committing, staging, pushing, opening pull requests, monitoring checks, preparing merge notes, or landing changes through a disciplined PR workflow.
 ---
 
 # PR Shipping — Commit, PR, Monitor, Land

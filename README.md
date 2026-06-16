@@ -1,14 +1,29 @@
 # Agent Skills
 
-Reusable agent skills for Apple platform engineering, product work, and project workflows. The active catalog contains 106 skills, grouped into plugin bundles but usable as plain `SKILL.md` directories by any agent runtime that supports local skills.
+Reusable agent skills for Apple platform engineering, product work, and project workflows. The active catalog contains 112 skills, grouped into plugin bundles but usable as plain `SKILL.md` directories by any agent runtime that supports local skills.
 
 ## What This Repo Contains
 
 - Active skills live in `plugins/<bundle>/skills/<skill-name>/SKILL.md`.
 - Long guidance, examples, and checklists live under each skill's `references/` directory.
+- Project workflow personas live in `plugins/project-tools/agents/`.
 - Plugin metadata lives in `.claude-plugin/` directories for runtimes that install bundled plugins.
+- Repository validation helpers live in `scripts/`.
 - `example-setup/` contains compact, generic project instruction and documentation templates.
-- This repository is skills-only.
+
+## Lifecycle View
+
+The lifecycle is exposed as skills, not command wrappers. Use `next-step-router` when the next phase is unclear.
+
+| Phase | Primary Skills | Use |
+|---|---|---|
+| Define | `interview-me`, `idea-refine`, `spec-workflow`, `design`, `user-test` | Clarify intent, explore ideas, scope product direction, and define acceptance criteria before building. |
+| Plan | `plan`, `project-state-audit`, `blast-radius`, `source-driven-development` | Turn scope into ordered work, find affected systems, and verify source-backed API assumptions. |
+| Build | `implement`, `incremental-implementation`, `test-driven-implementation`, `small-change` | Execute approved work with the right level of slicing, tests, and verification. |
+| Doubt | `doubt-driven-development`, `strategy-audit`, `independent-review` | Stress-test non-trivial implementation hypotheses, strategy claims, and high-risk decisions. |
+| Debug | `hypothesis-debug`, `deep-investigate`, `forensics`, `agent-harness-audit` | Reproduce failures, isolate causes, fix bugs, or improve missing agent harnesses. |
+| Review | `code-review`, `code-simplification`, `code-style`, `ux-audit`, `pre-ship` | Review correctness, quality, complexity, user experience, and release readiness. |
+| Ship | `post-implementation-qa`, `pr-shipping`, `change-summary`, `session-handoff` | Run validation, summarize changes, commit, push, open PRs, and leave durable handoff state. |
 
 ## Catalog Summary
 
@@ -18,9 +33,9 @@ Reusable agent skills for Apple platform engineering, product work, and project 
 | `plugins/ios-platform` | 11 | Cross-cutting Apple platform skills for architecture, debugging, testing, tooling, HIG, Swift language, and App Store release work. |
 | `plugins/swiftui` | 9 | SwiftUI skills for implementation, design exploration, hardening, performance, visual review, shaders, and Figma translation. |
 | `plugins/uikit` | 6 | UIKit skills for Auto Layout, collection views, Core Animation, navigation, fundamentals, and SwiftUI interop. |
-| `plugins/project-tools` | 41 | Generic project workflow skills for planning, specs, debugging, review, refactoring, release, memory, and session hygiene. |
+| `plugins/project-tools` | 47 | Generic project workflow skills for planning, specs, debugging, review, refactoring, release, memory, and session hygiene. |
 | `plugins/product` | 4 | Product skills for analytics interpretation, App Store marketing, monetization strategy, and onboarding. |
-| **Total** | **106** | |
+| **Total** | **112** | |
 
 ## Installation
 
@@ -75,7 +90,7 @@ Apple framework skills for iOS and Apple platform development.
 | `combine` | Use when writing, reviewing, or migrating Combine publishers, subscribers, subjects, operator chains, or async bridges. |
 | `core-data` | Use when writing or reviewing Core Data stacks, models, migrations, concurrency, relationships, or CloudKit integration. |
 | `core-location` | Use when implementing or debugging Core Location authorization, CLServiceSession, CLMonitor, background location, or async location updates. |
-| `coreml-vision` | On-device machine learning with CoreML model loading/prediction and Vision framework image analysis |
+| `coreml-vision` | Use when implementing or reviewing on-device machine learning with CoreML model loading, predictions, Vision image analysis, feature providers, or ML pipeline integration. |
 | `discoverability` | Use when planning or debugging app discoverability through App Intents, Spotlight, Siri suggestions, Action Button, or Control Center. |
 | `foundation-models` | Use when implementing Apple Foundation Models sessions, guided generation, tool calling, streaming, or availability checks. |
 | `grdb` | Use when writing or reviewing GRDB records, SQL, migrations, associations, observation, concurrency, or persistence safety. |
@@ -114,7 +129,7 @@ Cross-cutting Apple platform skills for architecture, debugging, testing, toolin
 | `platform-hig` | Use when building, reviewing, or refactoring UI against Apple Human Interface Guidelines across iOS, iPadOS, macOS, tvOS, watchOS, or visionOS. |
 | `swift-concurrency` | Use when writing or reviewing async/await, actors, Sendable, task cancellation, isolation, or Swift concurrency migrations. |
 | `swift-language` | Use when writing or reviewing Swift language features, ownership, noncopyable types, InlineArray, Span, typed throws, or C bounds safety. |
-| `swift-testing` | Writes, reviews, and improves Swift Testing code using modern APIs, TDD workflow, fixture philosophy, and best practices. |
+| `swift-testing` | Use when writing, reviewing, debugging, or improving Swift Testing code with modern APIs, TDD workflow, fixtures, traits, expectations, or test organization. |
 | `xcuitest` | Use when writing or debugging XCUITest flows, accessibility identifiers, waits, page objects, system alerts, or UI test failures. |
 
 ### swiftui (9 skills)
@@ -146,53 +161,70 @@ UIKit skills for Auto Layout, collection views, Core Animation, navigation, fund
 | `uikit-interop` | Use when bridging SwiftUI and UIKit with representables, UIHostingController, UIHostingConfiguration, or incremental adoption. |
 | `uikit-navigation` | Use when building or reviewing UIKit navigation controllers, modal presentations, custom transitions, or coordinator routing. |
 
-### project-tools (41 skills)
+### project-tools (47 skills)
 
 Generic project workflow skills for planning, specs, debugging, review, refactoring, release, memory, and session hygiene.
 
 | Skill | Use |
 |---|---|
 | `agent-harness-audit` | Use when an agent repeatedly fails, needs manual context, cannot reproduce or verify a bug, cannot inspect runtime behaviour, or relies on copy-pasted human knowledge. |
-| `blast-radius` | Analyze a diff or branch to identify affected files, dependents, tests, and release risk before shipping. |
+| `blast-radius` | Use when analyzing a diff, branch, or planned change to identify affected files, dependents, tests, release risk, rollback scope, or hidden blast radius before shipping. |
 | `breaking-change-guard` | Use when changing behavior, persisted state, schemas, contracts, flags, routing, or architecture where compatibility, migration, fallback, or dual behavior is being considered. |
 | `capture-idea` | Use when capturing an early idea or out-of-scope improvement in a lightweight backlog without derailing current work. |
 | `capture-lesson` | Use when a correction, gotcha, near-miss, surprising behavior, or repeated mistake should be captured as durable project knowledge. |
 | `change-summary` | Use when summarizing changes, documenting root cause, listing verification, producing rollback notes, or drafting a change-summary. |
-| `code-review` | Review code changes for defects, regressions, missing tests, and risky design decisions before shipping. |
-| `code-style` | Audit and fix non-mechanical code style issues that formatters and linters usually miss. |
-| `competitor-research` | Research competitor apps and add structured competitor entries to a project reference document. |
+| `code-review` | Use when reviewing code changes for defects, regressions, missing tests, risky design decisions, security issues, performance problems, or overall quality before shipping. |
+| `code-simplification` | Use when working code is harder than necessary to understand, review, maintain, test, or change, and behavior must be preserved while reducing complexity. |
+| `code-style` | Use when auditing or fixing non-mechanical code style issues that formatters and linters usually miss, including clarity, naming, consistency, and house-style drift. |
+| `competitor-research` | Use when researching competitor apps, product alternatives, market references, app listings, pricing, positioning, or structured competitor entries for a project reference document. |
 | `debate` | Use when comparing approaches or tradeoffs through structured opposing arguments before choosing a technical or product direction. |
-| `deep-investigate` | Diagnose a specific root cause without applying fixes. Use for read-only investigation, causal-chain analysis, and evidence-backed reports. |
-| `design` | Use before creative implementation work to clarify intent, explore approaches, and produce an approved design direction. |
+| `deep-investigate` | Use when diagnosing a specific root cause without applying fixes, performing read-only investigation, building a causal chain, or producing an evidence-backed report. |
+| `design` | Use when creative implementation work needs clarified intent, approach exploration, design direction, user-facing product decisions, or approval before code changes. |
+| `doubt-driven-development` | Use when a non-trivial implementation decision, hypothesis, safety claim, migration, or architecture choice needs adversarial review before it becomes code or shipping guidance. |
 | `evaluate-findings` | Use when validating external feedback, review comments, AI findings, dead-code reports, or suspected false positives. |
 | `explain` | Explain how code works with summaries, diagrams, analogies, and annotated snippets. Use when the user asks "how does X work?" or wants a codebase walkthrough. |
-| `find-dead-code` | Find unused production code with parallel analysis, treating code referenced only from tests as dead. Analysis-only; does not delete code. |
-| `forensics` | Investigate what happened after confusing failures, regressions, bad merges, or unclear project state. |
+| `find-dead-code` | Use when finding unused production code, dead exports, stale helpers, test-only references, or deletion candidates with analysis-only reporting before any removal. |
+| `forensics` | Use when investigating what happened after confusing failures, regressions, bad merges, unexpected repository state, unclear causality, or contradictory evidence. |
 | `git-worktrees` | Use when starting isolated feature work in a git worktree or when implementation needs branch/worktree separation. |
-| `hypothesis-debug` | Debug and fix a bug end-to-end using reproduction, hypotheses, evidence, a minimal fix, regression coverage, and verification. |
-| `implement` | Implement approved specifications through a scoped, test-first, verified project workflow. |
+| `hypothesis-debug` | Use when debugging and fixing a bug end-to-end with reproduction, hypotheses, evidence, a minimal fix, regression coverage, and verification. |
+| `idea-refine` | Use when a raw idea, feature concept, product direction, or speculative improvement needs divergent exploration, assumption testing, convergence, and a concrete next-step artifact. |
+| `implement` | Use when implementing approved specifications or scoped feature work through a test-first, verified project workflow after requirements and boundaries are clear. |
+| `incremental-implementation` | Use when implementing multi-file changes, large tasks, risky edits, or approved plans that need careful slicing, verification after each slice, and rollback-friendly progress. |
 | `independent-review` | Use when asking an independent reviewer or external review tool to audit recent changes, then validate each finding before acting. |
+| `interview-me` | Use when an ask, idea, feature, plan, or product direction is underspecified and the user wants guided questions, multiple-choice tradeoffs, recommended defaults, or collaborative scope shaping before specs or implementation. |
 | `multi-agent-implementation` | Use when executing an implementation plan with multiple mostly independent tasks that can be delegated and reviewed in parallel. |
 | `next-step-router` | Use when deciding which workflow or skill should run next based on conversation state, repo state, and verification status. |
 | `plan` | Use when work requires a persistent multi-step plan, findings log, or progress file before implementation. |
-| `post-implementation-qa` | Use after implementation to discover and run project-defined validation, review the diff, capture learnings, and prepare handoff to commit or PR shipping. |
-| `pr-shipping` | Commit, push, open pull requests, monitor checks, and land changes through a disciplined pull request workflow. |
-| `pre-ship` | Run a final quality gate across spec compliance, UX, visual polish, and verification before release. |
+| `post-implementation-qa` | Use when implementation is complete and the work needs project-defined validation, diff review, lesson capture, or handoff to commit and PR shipping. |
+| `pr-shipping` | Use when committing, staging, pushing, opening pull requests, monitoring checks, preparing merge notes, or landing changes through a disciplined PR workflow. |
+| `pre-ship` | Use when running a final quality gate across spec compliance, UX, visual polish, verification, release readiness, and unresolved risk before shipping. |
 | `project-skill-audit` | Use when auditing, deduplicating, renaming, removing, or improving project skill catalogs. |
 | `project-state-audit` | Use when reconciling repository code, specs, scope, todos, and backlog items to determine current project state and next work. |
-| `reference-library` | Save useful external references such as repositories or articles into a project reference library. |
+| `reference-library` | Use when saving useful external references such as repositories, articles, documentation, examples, or research notes into a project reference library. |
 | `session-distill` | Use when distilling a session, saving learnings, capturing durable corrections, extracting lessons, updating project memory, or improving future agent behaviour. |
 | `session-handoff` | Use when pausing, resuming, or creating a durable handoff so later work can continue safely. |
 | `skill-research` | Use when researching a technology or external skill to create, update, or improve reusable agent skills from verified sources. |
 | `small-change` | Use when making a trivial or small targeted change that needs direct implementation plus the minimum verification appropriate to its risk. |
+| `source-driven-development` | Use when framework, SDK, API, dependency, or platform-specific code must be grounded in current official documentation instead of memory or stale examples. |
 | `spec-workflow` | Use when drafting, clarifying, researching, or syncing a feature specification before or after implementation. |
 | `strategic-refactor` | Use when finding high-leverage refactors, identifying repo-wide complexity, choosing the best refactor, reducing architectural drag, or ranking refactor candidates. |
 | `strategy-audit` | Use when proposing, reviewing, or choosing a strategy, plan, architecture, migration, rollout, or confidence claim. |
 | `test-driven-implementation` | Use when implementing specs with significant business logic, persistence, complex rules, or high-risk behaviour where independent behavioural tests should drive the implementation. |
 | `tidy-memory` | Use when auditing, shrinking, organizing, compacting, trimming, or deduplicating agent memory or project memory that has become stale or too large. |
-| `user-test` | Evaluate a feature, idea, spec, or design through target personas and produce a product verdict. |
-| `ux-audit` | Audit user-facing workflows from entry points through outcomes to find broken promises and dead ends. |
+| `user-test` | Use when evaluating a feature, idea, spec, design, onboarding flow, product decision, or tradeoff through target personas before implementation or release. |
+| `ux-audit` | Use when auditing user-facing workflows, screens, navigation, onboarding, conversion paths, or product promises from entry point through outcome. |
 | `writing-skills` | Use when creating new skills, editing existing skills, or verifying skills work before deployment |
+
+## Project Personas
+
+Reusable persona prompts live in `plugins/project-tools/agents/`.
+
+| Persona | Use |
+|---|---|
+| `code-reviewer` | Fresh code review across correctness, architecture, tests, security, performance, and maintainability. |
+| `test-engineer` | Test strategy review, regression coverage, edge cases, and verification gaps. |
+| `security-auditor` | Practical security review for exploitable risks, trust boundaries, secrets, auth, and privacy. |
+| `web-performance-auditor` | Web performance review with metric honesty for Core Web Vitals, loading, rendering, and JavaScript cost. |
 
 ### product (4 skills)
 
@@ -215,6 +247,16 @@ Product skills for analytics interpretation, App Store marketing, monetization s
 - Keep framework-specific skills separate when merging would reduce correctness.
 - Add routing notes between competing or complementary skills.
 - If a workflow needs project setup, search for it first; ask only when it cannot be found.
+
+## Validation
+
+Run the local validator before shipping catalog changes:
+
+```bash
+node scripts/validate-skills.js
+```
+
+The validator checks `plugins/*/skills/*/SKILL.md` frontmatter, description length, trigger wording, required Markdown structure, and dead cross-skill references.
 
 ## License
 

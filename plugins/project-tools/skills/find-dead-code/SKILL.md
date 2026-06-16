@@ -1,6 +1,6 @@
 ---
 name: find-dead-code
-description: Find unused production code with parallel analysis, treating code referenced only from tests as dead. Analysis-only; does not delete code.
+description: Use when finding unused production code, dead exports, stale helpers, test-only references, or deletion candidates with analysis-only reporting before any removal.
 ---
 
 # Find Dead Code

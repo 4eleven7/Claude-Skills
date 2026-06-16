@@ -1,6 +1,6 @@
 ---
 name: swift-testing
-description: Writes, reviews, and improves Swift Testing code using modern APIs, TDD workflow, fixture philosophy, and best practices.
+description: Use when writing, reviewing, debugging, or improving Swift Testing code with modern APIs, TDD workflow, fixtures, traits, expectations, or test organization.
 ---
 
 # swift-testing

@@ -39,9 +39,14 @@ Map the session state to a position in the workflow pipeline:
 
 ```
 Thinking about a feature
+  → `interview-me` (if intent, user, success, constraints, or non-goals are unclear)
+  → `idea-refine` (if the raw idea needs divergent options before a spec)
   → `spec-workflow` (if spec exists but has gaps)
   → `project-state-audit` (if unsure what to work on next)
+  → `source-driven-development` (if framework, SDK, or dependency correctness depends on current docs)
+  → `doubt-driven-development` (if the implementation depends on a non-trivial hypothesis or safety claim)
   → `test-driven-implementation` (if spec is ready and behaviour is high-risk, persistence-heavy, or complex)
+  → `incremental-implementation` (if the implementation is multi-file or should be sliced carefully)
   → `implement` (if spec is ready)
 
 Small or trivial change
@@ -57,6 +62,7 @@ Building a feature
 
 Code is written and working
   → `code-style` (if UI code, hasn't been style-checked)
+  → `code-simplification` (if code works but is unnecessarily complex)
   → `ux-audit` (if user-facing, hasn't been UX-audited)
   → `pre-ship` (if user-facing, hasn't been polished)
   → `code-review` (if complex, hasn't been reviewed)
@@ -76,6 +82,7 @@ Just shipped / between tasks
   → `project-state-audit` (to find what's next in the project)
 
 Deciding between user-facing features
+  → `idea-refine` (if the options are still rough concepts)
   → `user-test` (compare options through target user lenses)
 
 Capturing an idea for later

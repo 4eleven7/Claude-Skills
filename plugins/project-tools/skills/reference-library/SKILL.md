@@ -1,6 +1,6 @@
 ---
 name: reference-library
-description: Save useful external references such as repositories or articles into a project reference library.
+description: Use when saving useful external references such as repositories, articles, documentation, examples, or research notes into a project reference library.
 ---
 
 # Add Reference — Save External Inspiration

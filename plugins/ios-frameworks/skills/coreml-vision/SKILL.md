@@ -1,6 +1,6 @@
 ---
 name: coreml-vision
-description: On-device machine learning with CoreML model loading/prediction and Vision framework image analysis
+description: Use when implementing or reviewing on-device machine learning with CoreML model loading, predictions, Vision image analysis, feature providers, or ML pipeline integration.
 ---
 
 # CoreML + Vision Skill

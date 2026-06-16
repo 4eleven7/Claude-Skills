@@ -8,6 +8,8 @@ Use this skill as the Code Review workflow. Your job is to find defects by spawn
 
 This is not a summary of the diff. It is a search for things that are wrong.
 
+This is also the catalog's code-review-and-quality workflow. Review every material change across correctness, readability, architecture, security, performance, and verification quality. Do not create a parallel review workflow unless the trigger is genuinely narrower than code review.
+
 For Swift or SwiftUI diffs that need reuse, quality, efficiency, and clarity lenses, use `references/swift-review-lenses/overview.md` and the lens files in that directory as supporting review prompts. Do not route to a separate Swift-specific code-review skill.
 
 ## Freshness Rule

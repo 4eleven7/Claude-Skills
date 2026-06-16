@@ -1,6 +1,6 @@
 ---
 name: design
-description: Use before creative implementation work to clarify intent, explore approaches, and produce an approved design direction.
+description: Use when creative implementation work needs clarified intent, approach exploration, design direction, user-facing product decisions, or approval before code changes.
 ---
 
 # Design Before Code
