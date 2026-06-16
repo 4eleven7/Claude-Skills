@@ -1,6 +1,6 @@
 ---
 name: deep-investigate
-description: Diagnose a specific root cause without applying fixes. Use for read-only investigation, causal-chain analysis, and evidence-backed reports.
+description: Use when diagnosing a specific root cause without applying fixes, performing read-only investigation, building a causal chain, or producing an evidence-backed report.
 ---
 
 # Deep Investigate

@@ -1,6 +1,6 @@
 ---
 name: ux-audit
-description: Audit user-facing workflows from entry points through outcomes to find broken promises and dead ends.
+description: Use when auditing user-facing workflows, screens, navigation, onboarding, conversion paths, or product promises from entry point through outcome.
 ---
 
 # UX Audit — User Experience Flow Analysis

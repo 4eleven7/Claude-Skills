@@ -1,6 +1,6 @@
 ---
 name: forensics
-description: Investigate what happened after confusing failures, regressions, bad merges, or unclear project state.
+description: Use when investigating what happened after confusing failures, regressions, bad merges, unexpected repository state, unclear causality, or contradictory evidence.
 ---
 
 # Forensics — Post-Mortem Investigation

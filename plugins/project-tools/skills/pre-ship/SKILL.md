@@ -1,6 +1,6 @@
 ---
 name: pre-ship
-description: Run a final quality gate across spec compliance, UX, visual polish, and verification before release.
+description: Use when running a final quality gate across spec compliance, UX, visual polish, verification, release readiness, and unresolved risk before shipping.
 ---
 
 # Pre-Ship — Quality Gate

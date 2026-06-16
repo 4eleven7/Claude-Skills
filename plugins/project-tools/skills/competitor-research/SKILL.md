@@ -1,6 +1,6 @@
 ---
 name: competitor-research
-description: Research competitor apps and add structured competitor entries to a project reference document.
+description: Use when researching competitor apps, product alternatives, market references, app listings, pricing, positioning, or structured competitor entries for a project reference document.
 ---
 
 # Add Competitor — Scout & Document a Competitor App

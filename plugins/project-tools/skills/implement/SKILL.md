@@ -1,6 +1,6 @@
 ---
 name: implement
-description: Implement approved specifications through a scoped, test-first, verified project workflow.
+description: Use when implementing approved specifications or scoped feature work through a test-first, verified project workflow after requirements and boundaries are clear.
 ---
 
 # Implement — Spec-Driven Feature Work

@@ -1,6 +1,6 @@
 ---
 name: user-test
-description: Evaluate a feature, idea, spec, or design through target personas and produce a product verdict.
+description: Use when evaluating a feature, idea, spec, design, onboarding flow, product decision, or tradeoff through target personas before implementation or release.
 ---
 
 # User Test — Synthetic User Evaluation

@@ -1,6 +1,6 @@
 ---
 name: hypothesis-debug
-description: Debug and fix a bug end-to-end using reproduction, hypotheses, evidence, a minimal fix, regression coverage, and verification.
+description: Use when debugging and fixing a bug end-to-end with reproduction, hypotheses, evidence, a minimal fix, regression coverage, and verification.
 ---
 
 # Hypothesis Debug
